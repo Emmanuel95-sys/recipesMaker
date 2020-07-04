@@ -20,23 +20,92 @@ fun main() {
 }
 
 fun viewRecipe() {
-    println("Metodo para hacer recetas\n")
-    val ingredientes =
-    """
-    Hacer receta
-    Selecciona por categoría el ingrediente que buscas
-    1. Agua
-    2. Leche
-    3. Carne
-    4. Verduras
-    5. Frutas
-    6. Cereal
-    7. Huevos
-    8. Aceites  
-    """.trimIndent()
-    println(ingredientes)
+    println("ver mis recetas\n")
+
 }
 
 fun makeRecipe() {
-    println("Ver mis recetas\n")
+    val ingredientes =
+        """
+        Hacer receta
+        Selecciona por categoría el ingrediente que buscas
+        1. Liquidos
+        2. Origen Animal
+        3. Verduras
+        4. Frutas
+        5. Cereal
+        """.trimIndent()
+
+    println(ingredientes)
+    var response:String? = readLine()
+    println("opcion elegida: $response")
+    when(response){
+        "1" -> showLiquids()
+        "2" -> showAnimalOrigin()
+        "3" -> showVegetables()
+        "4" -> showFruits()
+        "5" ->showCereals()
+        else -> println("Seleccione una opcion valida")
+    }
+
+}
+
+fun showCereals() {
+    val cereals =
+        """
+        Lista de cereles
+        1. Arroz
+        2. Maiz
+        3. Trigo
+        """.trimIndent()
+
+    println(cereals)
+}
+
+fun showFruits() {
+    val cereals =
+        """
+        Lista de cereles
+        1. Manzana
+        2. Uva
+        3. Platano
+        4. Durazno
+        """.trimIndent()
+
+    println(cereals)
+}
+
+fun showVegetables() {
+    val vegetales =
+        """
+        Lista de Vegetales
+        1. Brocoli
+        2.  Pepino
+        3. Lechuga
+        4. Tomate
+        """.trimIndent()
+
+    println(vegetales)
+}
+
+fun showAnimalOrigin() {
+    val animalOrigin =
+        """
+        Lista de Ingredietnes de origen animal
+        1. Carne
+        2.  Huevo
+        """.trimIndent()
+
+    println(animalOrigin)
+}
+
+fun showLiquids() {
+    val liquidos =
+        """
+        Lista de ingredientes liquidos
+        1. Agua
+        2. Leche
+        """.trimIndent()
+
+    println(liquidos)
 }
